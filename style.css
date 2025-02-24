@@ -1,0 +1,1663 @@
+/* General Styling */
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d72;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Screen 1 Styling */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.top-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.game-image {
+  height: auto;
+  margin: 0;
+}
+
+.b1 {
+  width: 9vw;
+  height: 70vh;
+}
+
+.b2 {
+  width: 18vw;
+  height: 45vh;
+  margin-left: 0;
+}
+
+.b3 {
+  width: 12vw;
+  height: 12vw;
+  margin-left: 6vw;
+}
+
+.b4-image {
+  width: 25vw;
+  height: auto;
+  cursor: pointer;
+  margin-left: 2vw;
+}
+
+.b5 {
+  width: 18vw;
+  height: 45vh;
+  position: absolute;
+  right: 10vw;
+}
+
+.b6 {
+  width: 12vw;
+  height: 70vh;
+  position: absolute;
+  right: 0;
+}
+
+.game-time-container {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+.game-text, .time-text {
+  font-size: 8vw;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+}
+
+.game-image-footer {
+  width: 100%;
+  height: auto;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 2 Styling */
+.rules-header {
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.rules-text {
+  font-size: 8vw;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.rules-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.b1s2 {
+  width: 20%;
+  height: auto;
+  margin-right: 0; /* No gap between B1S2 and B4S2 */
+}
+
+.b2s2 {
+  width: 45%;
+  height: auto;
+  margin: 0 auto; /* Center B2S2 */
+  text-align: center; /* Align text with REGELN */
+}
+
+.b3s2 {
+  width: 20%;
+  height: auto;
+  margin-left: 0; /* No gap between B3S2 and B4S2 */
+}
+
+.b4s2 {
+  margin: 0; /* Remove any gaps */
+  position: relative;
+  bottom: 0; /* Ensure alignment with B1S2 and B3S2 */
+}
+
+.footer {
+  margin: 0;
+  padding: 0; 
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 3 Styling */
+.ready-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ready-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 4 Styling */
+.frage1-header {
+  text-align: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.frage1-text {
+  font-size: 5vw;
+  color: white;
+  text-align: center;
+  
+}
+
+.frage1-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.b1s4 {
+  width: 15%;
+  height: auto;
+  margin-right: 0; /* No gap between B1S2 and B4S2 */
+}
+
+.b2s4 {
+  width: 15%;
+  height: auto;
+  margin-left: 0; /* No gap between B3S2 and B4S2 */
+}
+
+.b3s4 {
+  margin: 0; /* Remove any gaps */
+  bottom: 0; /* Ensure alignment with B1S2 and B3S2 */
+}
+
+.footer {
+  margin: 0;
+  padding: 0; 
+}
+
+/* Question Box Styling */
+.question-box {
+  background-color: #8453d4;
+  padding: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 600px; /* Increase max-width for a better sized box */
+  flex-direction: column; /* Arrange elements vertically */
+  border: 5px solid #fff; /* Add a white border to the question box */
+  box-shadow: 
+    8px 8px 0 #000,      /* Bottom-right black shadow */
+    -8px -8px 0 #000,    /* Top-left black shadow */
+    -8px 8px 0 #000,     /* Bottom-left black shadow */
+    8px -8px 0 #000;     /* Top-right black shadow */
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.question-container {
+  text-align: center;
+  width: 100%;
+}
+
+.question-container p {
+  font-size: 1.5vw;
+  color: white;
+  margin-bottom: 1vw; /* Create space between question and input box */
+  line-height: 2; /* Increase line height for better readability */
+  word-wrap: break-word;
+}
+
+#answerInput {
+  font-size: 1.5vw;
+  font-family: 'Press Start 2P', cursive;
+  padding: 1.2vw;
+  margin-top: 1vw;
+  width: 90%; /* Increase input box size */
+  /*border-radius: 10px;*/
+  border: 3px solid #fff; 
+  background-color: #8453d4;
+  color: white;
+  text-align: center;
+  outline: none;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2); /* Inset shadow effect on input box */
+}
+
+#answerInput::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Button Styling */
+#continueBtn {
+  font-size: 1.2vw;
+  font-family: 'Press Start 2P', cursive; /* Pixel style font */
+  padding: 1vw 2.5vw;
+  margin-top: 1.2vw;
+  background-color: #df4747; 
+  color: white;
+  border: none; 
+  border-radius: 20px; /* Rounded button corners */
+  position: relative; /* Allow white border */
+  text-transform: uppercase; 
+  cursor: pointer;
+  box-shadow: 
+    0 8px 0 #4b0082, /* Dark purple pixel shadow below */
+    0 0 0 4px #fff;  /* White border around the button */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+#continueBtn:hover {
+  transform: translateY(-2px); /* Dịch lên khi hover */
+  box-shadow: 
+    0 6px 0 #4b0082, /* Bóng pixel đậm hơn */
+    0 0 0 4px #fff;  /* Viền trắng giữ nguyên */
+}
+
+#continueBtn:active {
+  transform: translateY(2px); /* Move up on hover */
+  box-shadow: 
+    0 4px 0 #4b0082, /* Darker pixel shadow */
+    0 0 0 4px #fff;  /* White border remains */
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 5 Styling */
+#screen5 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2d72;
+}
+
+/* Background image: Full screen */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image adjusts to screen size */
+}
+
+/* Overlay content */
+.content-overlay5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem; /* Adds padding for smaller screens */
+}
+
+/* Scrolling text */
+.scrolling-text {
+  position: absolute;
+  top: 8%; /* Adjusts based on screen size */
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scrolling-text h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4vw; /* Adjusts font size to viewport width */
+  color: black;
+  display: inline-block;
+  animation: scrolling 10s linear infinite; /* Continuous horizontal scroll */
+}
+
+/* Text "Falsche Antwort" */
+.text-container {
+  display: flex;
+  flex-direction: column; /* Display "Falsche" and "Antwort" vertically */
+  align-items: center;
+}
+
+.falsche-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7vw; /* Responsive font size */
+  color: white;
+  margin: 0;
+  margin-bottom: 1rem; /* Create space between text and icons */
+}
+
+.antwort-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7vw; /* Responsive font size */
+  color: white;
+  margin: 0;
+}
+
+/* Icons (Heart and Red X) */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures icons wrap on smaller screens */
+}
+
+.heart-icon {
+  width: 100vw; /* Adjusts size dynamically based on screen width */
+  max-width: 400px; /* Limits maximum size for large screens */
+  height: auto;
+}
+
+.red-x-icon {
+  width: 15vw; /* Adjusts size dynamically based on screen width */
+  max-width: 250px; /* Limits maximum size for large screens */
+  height: auto;
+  margin-left: -6vw; /* Overlap Red X slightly to remove the gap */
+}
+
+/* Scroll animation for "Something went wrong" */
+@keyframes scrolling {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive adjustments */
+@media screen5 and (max-width: 768px) {
+  /* For tablets and small screens */
+  .scrolling-text h1 {
+    font-size: 6vw; /* Larger text for smaller screens */
+  }
+
+  .falsche-antwort {
+    font-size: 6vw; /* Larger text for visibility */
+    margin-top: 8%;
+  }
+
+  .icon-container {
+    gap: 1rem; /* Reduce spacing between icons */
+  }
+
+  .heart-icon {
+    width: 40vw; /* Slightly larger for better visibility */
+  }
+
+  .red-x-icon {
+    width: 20vw;
+  }
+
+  .red-x-icon {
+    margin-left: -10vw; /* Adjust overlap for smaller screens */
+  }
+}
+
+@media screen5 and (max-width: 480px) {
+  /* For mobile devices */
+  .scrolling-text h1 {
+    font-size: 8vw; /* Even larger text for mobile */
+  }
+
+  .falsche-antwort {
+    font-size: 8vw;
+    margin-top: 5%;
+  }
+
+  .heart-icon,
+  .red-x-icon {
+    width: 15vw; /* Larger icons for mobile */
+  }
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 6 Styling */
+#screen6 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('images/B1S6.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Items Container */
+.items-container6 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem 10rem;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Item (Icon + Button) */
+.item6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: -1rem;
+}
+
+/* Item Buttons */
+.item-button6 {
+  width: 17vw;
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Hidden Items */
+.hidden-item {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 17vw;
+  max-width: 200px;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 8 Styling */
+#screen8 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image8 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Content Overlay */
+.content-overlay8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container8 {
+  position: absolute;
+  top: 45%; 
+  right: 30%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
+}
+
+/* Buttons */
+.button8 {
+  width: 18vw; 
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button8:hover {
+  transform: scale(1.1);
+}
+
+.button8:active {
+  transform: scale(0.9);
+}
+
+/* Screen 8 Blur Effect */
+.blur8 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container8 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content8 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S8) */
+.popup-content8 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S8 */
+#closePopup8 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup8:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup8:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 10 Styling */
+#screen10 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image10 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Content Overlay */
+.content-overlay10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container10 {
+  position: absolute;
+  top: 45%; 
+  right: 30%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
+}
+
+/* Buttons */
+.button10 {
+  width: 18vw; 
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button10:hover {
+  transform: scale(1.1);
+}
+
+.button10:active {
+  transform: scale(0.9);
+}
+
+/* Screen 10 Blur Effect */
+.blur10 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container10 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content10 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S8) */
+.popup-content10 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S8 */
+#closePopup10 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup10:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup10:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 12 Styling */
+#screen12 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image12 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+}
+
+/* Content Overlay */
+.content-overlay12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container12 {
+  position: absolute;
+  top: 45%; 
+  right: 30%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* Buttons */
+.button12 {
+  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button12:hover {
+  transform: scale(1.1);
+}
+
+.button12:active {
+  transform: scale(0.9);
+}
+
+/* Screen 12 Blur Effect */
+.blur12 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container12 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content12 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S12) */
+.popup-content12 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S12 */
+#closePopup12 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup12:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup12:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/* Screen 12 Styling */
+#screen12 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image12 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+}
+
+/* Content Overlay */
+.content-overlay12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container12 {
+  position: absolute;
+  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
+  right: 30%; /* Canh lề phải */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* Buttons */
+.button12 {
+  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button12:hover {
+  transform: scale(1.1);
+}
+
+.button12:active {
+  transform: scale(0.9);
+}
+
+/* Screen 12 Blur Effect */
+.blur12 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container12 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content12 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S12) */
+.popup-content12 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S12 */
+#closePopup12 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S12 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup12:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup12:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 14 Styling */
+#screen14 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image14 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+}
+
+/* Content Overlay */
+.content-overlay14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container14 {
+  position: absolute;
+  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
+  right: 30%; /* Canh lề phải */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* Buttons */
+.button14 {
+  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button14:hover {
+  transform: scale(1.1);
+}
+
+.button14:active {
+  transform: scale(0.9);
+}
+
+/* Screen 14 Blur Effect */
+.blur14 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container14 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content14 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S14) */
+.popup-content12 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S14 */
+#closePopup14 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup14:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup14:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/* Screen 14 Styling */
+#screen14 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image14 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+}
+
+/* Content Overlay */
+.content-overlay14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container14 {
+  position: absolute;
+  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
+  right: 30%; /* Canh lề phải */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* Buttons */
+.button14 {
+  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button14:hover {
+  transform: scale(1.1);
+}
+
+.button14:active {
+  transform: scale(0.9);
+}
+
+/* Screen 14 Blur Effect */
+.blur14 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container14 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content14 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S14) */
+.popup-content14 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S14 */
+#closePopup14 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup14:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup14:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 16 Styling */
+#screen16 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image16 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+}
+
+/* Content Overlay */
+.content-overlay16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container16 {
+  position: absolute;
+  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
+  right: 30%; /* Canh lề phải */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* Buttons */
+.button16 {
+  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button16:hover {
+  transform: scale(1.1);
+}
+
+.button16:active {
+  transform: scale(0.9);
+}
+
+/* Screen 16 Blur Effect */
+.blur16 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container16 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content16 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S16) */
+.popup-content16 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S16 */
+#closePopup16 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup16:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup16:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/* Screen 16 Styling */
+#screen16 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image16 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+}
+
+/* Content Overlay */
+.content-overlay16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Container */
+.buttons-container16 {
+  position: absolute;
+  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
+  right: 30%; /* Canh lề phải */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* Buttons */
+.button16 {
+  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button16:hover {
+  transform: scale(1.1);
+}
+
+.button16:active {
+  transform: scale(0.9);
+}
+
+/* Screen 16 Blur Effect */
+.blur16 {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents interactions with blurred elements */
+}
+
+/* Popup Container */
+.popup-container16 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content16 {
+  background: rgb(253, 252, 252);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+  justify-content: center;
+}
+
+/* Popup Image (B5S16) */
+.popup-content16 img {
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 1rem; /* Add space below image */
+}
+
+/* OK Button - Centered Below B5S16 */
+#closePopup16 {
+  font-family: 'Press Start 2P', cursive;
+  background: rgb(159, 1, 1);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 3px 3px 0px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Match width to B5S8 */
+  max-width: 400px; /* Keep button width proportional */
+}
+
+/* Hover Effect - Slight Lift */
+#closePopup16:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Click Effect - Button Pressed */
+#closePopup16:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px black;
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 18 Styling */
+#screen18 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container18 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image18 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* B2S18 and B4S18 - Align Horizontally */
+.b2b4-container {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 600px;
+}
+
+/* B2S18 */
+.b2s18 {
+  width: 25vw;
+  height: auto;
+}
+
+/* B4S18 */
+.b4s18 {
+  width: 25vw;
+  height: auto;
+}
+
+/* Điều chỉnh vị trí của B3S18 để nằm trên B4S18 */
+.b3s18-container {
+  position: absolute;
+  top: 30%; /* Điều chỉnh cao hơn B4S18 */
+  left: 85%; /* Điều chỉnh vị trí gần với B4S18 */
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* Hiển thị B3S18 theo hàng ngang và chồng lên nhau */
+.b3s18 {
+  width: 8vw;
+  height: auto;
+  margin-left: -5vw; /* Giảm khoảng cách để các đồng xu chồng lên nhau */
+  position: relative; /* Cho phép di chuyển từng hình */
+}
+/* Tạo hiệu ứng nhô lên */
+.b3s18:nth-child(1),
+.b3s18:nth-child(3),
+.b3s18:nth-child(4),
+.b3s18:nth-child(6) {
+  top: -15px; /* Nhô lên cố định */
+}
+
+/*++++++++++++++++++++++++++++++++++++++*/
+/* Screen 19 Styling */
+#screen19 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Styling */
+.background-container19 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image19 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh phủ kín màn hình */
+}

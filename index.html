@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Screen 1 -->
+    <div class="game-container" id="screen1">
+        <div class="top-row">
+            <img src="images/B1S1.png" alt="B1S1" class="game-image b1">
+            <img src="images/B2S1.png" alt="B2S1" class="game-image b2">
+            <img src="images/B3S1.png" alt="B3S1" class="game-image b3">
+            <div class="game-time-container">
+                <h1>
+                    <span class="game-text">GAME</span>
+                    <span class="time-text">TIME</span>
+                </h1>
+                <img src="images/B4S1.png" alt="B4S1" class="b4-image" onclick="showScreen(2)">
+            </div>
+            <img src="images/B5S1.png" alt="B5S1" class="game-image b5">
+            <img src="images/B6S1.png" alt="B6S1" class="game-image b6">
+        </div>
+        <div class="footer">
+            <img src="images/B7S1.png" alt="B7S1" class="game-image-footer">
+        </div>
+    </div>
+
+    <!-- Screen 2 -->
+    <div class="game-container" id="screen2" style="display: none;" onclick="showScreen(3)">
+        <div class="rules-header">
+            <h1 class="rules-text">REGELN</h1>
+        </div>
+        <div class="rules-container">
+            <img src="images/B1S2.png" alt="B1S2" class="game-image b1s2">
+            <img src="images/B2S2.png" alt="B2S2" class="game-image b2s2">
+            <img src="images/B3S2.png" alt="B3S2" class="game-image b3s2">
+        </div>
+        <div class="footer">
+            <img src="images/B4S2.png" alt="B4S2" class="game-image-footer">
+        </div>
+    </div>
+
+    <!-- Screen 3 -->
+    <div class="game-container" id="screen3" style="display: none;" onclick="showScreen(4)">
+        <div class="ready-container">
+            <img src="images/BS3.png" alt="BS3" class="ready-image">
+        </div>
+    </div>
+
+    <!-- Screen 4 -->
+    <div class="game-container" id="screen4" style="display: none;">
+        <div class="frage1-header">
+            <h1 class="frage1-text">1 FRAGE</h1>
+        </div>
+        <div class="frage1-container">
+            <img src="images/B1S4.png" alt="B1S4" class="game-image b1s4">
+            <div class="question-box">
+                <div class="question-container">
+                    <p>Wie viele Teile werden hier in der Modellfabrik hergestellt?</p>
+                    <input type="number" id="answerInput" placeholder="Antwort" min="0" step="1">
+                    <button id="continueBtn" onclick="checkAnswer()">Continue</button>
+                </div>
+            </div>
+            <img src="images/B2S4.png" alt="B2S4" class="game-image b2s4">
+        </div>
+        <div class="footer">
+            <img src="images/B3S4.png" alt="B3S4" class="game-image-footer">
+        </div>
+    </div>
+
+    <!-- Screen 5 -->
+    <div class="game-container" id="screen5" style="display: none;">
+        <!-- Main background image -->
+        <div class="background-container">
+            <img src="images/B1S5.png" alt="Background" class="background-image">
+        </div>
+        <!-- Overlay content -->
+        <div class="content-overlay5">
+            <!-- Scrolling text "Something went wrong" -->
+            <div class="scrolling-text">
+                <h1>Something went wrong</h1>
+            </div>
+            <!-- Text "Falsche Antwort" -->
+            <div class="text-container">
+                <h1 class="falsche-text">Falsche</h1>
+                <h1 class="antwort-text">Antwort</h1>
+            </div>
+            <!-- Icons: Heart and Red X -->
+            <div class="icon-container">
+                <img src="images/B2S5.png" alt="Heart" class="heart-icon">
+                <img src="images/B3S5.png" alt="Red X" class="red-x-icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 6 -->
+    <div class="game-container" id="screen6" style="display: none;">
+        <div class="items-container6">
+            <!-- Left Column -->
+            <div class="item6">
+                <img src="images/B3S6.png" alt="B3S6" class="item-icon6">
+                <img src="images/B4S6.png" alt="Schrauben" class="item-button6 clickable" id="btnB4S6">
+            </div>
+            <div class="item6">
+                <img src="images/B7S6.png" alt="B7S6" class="item-icon6">
+                <img src="images/B8S6.png" alt="Bleche" class="item-button6 clickable" id="btnB8S6">
+            </div>
+
+            <!-- Right Column -->
+            <div class="item6">
+                <img src="images/B5S6.png" alt="B5S6" class="item-icon6">
+                <img src="images/B6S6.png" alt="Tellerfedern" class="item-button6 clickable" id="btnB6S6">
+            </div>
+            <div class="item6">
+                <img src="images/B9S6.png" alt="B9S6" class="item-icon6">
+                <img src="images/B10S6.png" alt="Unterlegscheiben" class="item-button6 clickable" id="btnB10S6">
+            </div>
+        </div>
+
+        <!-- B11S6 (Initially Hidden) -->
+        <img src="images/B11S6.png" alt="B11S6" class="hidden-item" id="B11S6">
+    </div>
+
+    <!-- Screen 8 -->
+    <div class="game-container" id="screen8" style="display: none;">
+        <!-- Background -->
+        <div class="background-container8">
+            <img src="images/B1S8.png" alt="B1S8" class="background-image8">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay8">
+            <!-- Button Group -->
+            <div class="buttons-container8">
+                <img src="images/B2S8.png" alt="Spritzgussmaschine" class="button8" id="btnB2S8">
+                <img src="images/B3S8.png" alt="3D-Drucker" class="button8" id="btnB3S8">
+                <img src="images/B4S8.png" alt="Fräse" class="button8" id="btnB4S8">
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for B5S8 -->
+    <div class="popup-container8" id="popupB5S8" style="display: none;">
+        <div class="popup-content8">
+            <img src="images/B5S8.png" alt="Popup B5S8">
+            <button id="closePopup8">OK</button>
+        </div>
+    </div>
+
+    <!-- Screen 10 -->
+    <div class="game-container" id="screen10" style="display: none;">
+        <!-- Background -->
+        <div class="background-container10">
+            <img src="images/B1S10.png" alt="B1S10" class="background-image10">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay10">
+            <!-- Button Group -->
+            <div class="buttons-container10">
+                <img src="images/B2S10.png" alt="Spritzgussmaschine" class="button8" id="btnB2S10">
+                <img src="images/B3S10.png" alt="3D-Drucker" class="button8" id="btnB3S10">
+                <img src="images/B4S10.png" alt="Fräse" class="button8" id="btnB4S10">
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for B5S10 -->
+    <div class="popup-container10" id="popupB5S10" style="display: none;">
+        <div class="popup-content10">
+            <img src="images/B5S10.png" alt="Popup B5S10">
+            <button id="closePopup10">OK</button>
+        </div>
+    </div>
+
+    <!-- Screen 12 -->
+    <div class="game-container" id="screen12" style="display: none;">
+        <!-- Background -->
+        <div class="background-container12">
+            <img src="images/B1S12.png" alt="B1S12" class="background-image12">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay12">
+            <!-- Button Group -->
+            <div class="buttons-container12">
+                <img src="images/B2S12.png" alt="Spritzgussmaschine" class="button12" id="btnB2S12">
+                <img src="images/B3S12.png" alt="3D-Drucker" class="button12" id="btnB3S12">
+                <img src="images/B4S12.png" alt="Fräse" class="button12" id="btnB4S12">
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for B5S12 -->
+    <div class="popup-container12" id="popupB5S12" style="display: none;">
+        <div class="popup-content12">
+            <img src="images/B5S12.png" alt="Popup B5S12">
+            <button id="closePopup12">OK</button>
+        </div>
+    </div>
+
+    <!-- Screen 12 -->
+    <div class="game-container" id="screen12" style="display: none;">
+        <!-- Background -->
+        <div class="background-container12">
+            <img src="images/B1S12.png" alt="B1S12" class="background-image12">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay12">
+            <!-- Button Group -->
+            <div class="buttons-container12">
+                <img src="images/B2S12.png" alt="Spritzgussmaschine" class="button12" id="btnB2S12">
+                <img src="images/B3S12.png" alt="3D-Drucker" class="button12" id="btnB3S12">
+                <img src="images/B4S12.png" alt="Fräse" class="button12" id="btnB4S12">
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for B5S12 -->
+    <div class="popup-container12" id="popupB5S12" style="display: none;">
+        <div class="popup-content12">
+            <img src="images/B5S12.png" alt="Popup B5S12">
+            <button id="closePopup12">OK</button>
+        </div>
+    </div>
+
+    <!-- Popup for B5S12 -->
+    <div class="popup-container12" id="popupB5S12" style="display: none;">
+        <div class="popup-content12">
+            <img src="images/B5S12.png" alt="Popup B5S12">
+            <button id="closePopup12">OK</button>
+        </div>
+    </div>
+
+    <!-- Screen 14 -->
+    <div class="game-container" id="screen14" style="display: none;">
+        <!-- Background -->
+        <div class="background-container14">
+            <img src="images/B1S14.png" alt="B1S14" class="background-image14">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay14">
+            <!-- Button Group -->
+            <div class="buttons-container14">
+                <img src="images/B2S14.png" alt="50 KW/H" class="button14" id="btnB2S14">
+                <img src="images/B3S14.png" alt="29,76 KW/H" class="button14" id="btnB3S14">
+                <img src="images/B4S14.png" alt="102,8 KW/H" class="button14" id="btnB4S14">
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for B5S14 -->
+    <div class="popup-container14" id="popupB5S14" style="display: none;">
+        <div class="popup-content14">
+            <img src="images/B5S14.png" alt="Popup B5S14">
+            <button id="closePopup14">OK</button>
+        </div>
+    </div>
+
+    <!-- Screen 16 -->
+    <div class="game-container" id="screen16" style="display: none;">
+        <!-- Background -->
+        <div class="background-container16">
+            <img src="images/B1S16.png" alt="B1S16" class="background-image16">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay16">
+            <!-- Button Group -->
+            <div class="buttons-container16">
+                <img src="images/B2S16.png" alt="50 KG CO2" class="button16" id="btnB2S16">
+                <img src="images/B3S16.png" alt="5,9 KG CO2" class="button14" id="btnB3S16">
+                <img src="images/B4S16.png" alt="3,28 KG CO2" class="button14" id="btnB4S16">
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for B5S16 -->
+    <div class="popup-container16" id="popupB5S16" style="display: none;">
+        <div class="popup-content16">
+            <img src="images/B5S16.png" alt="Popup B5S16">
+            <button id="closePopup16">OK</button>
+        </div>
+    </div>
+
+    <!-- Screen 18 -->
+    <div class="game-container" id="screen18" style="display: none;" onclick="showScreen(19)">
+        <!-- Background -->
+        <div class="background-container18">
+            <img src="images/B1S18.png" alt="B1S18" class="background-image18">
+        </div>
+
+        <!-- B3S18 Group (6 items) -->
+        <div class="b3s18-container">
+            <img src="images/B3S18.png" alt="B3S18" class="b3s18">
+            <img src="images/B3S18.png" alt="B3S18" class="b3s18">
+            <img src="images/B3S18.png" alt="B3S18" class="b3s18">
+            <img src="images/B3S18.png" alt="B3S18" class="b3s18">
+            <img src="images/B3S18.png" alt="B3S18" class="b3s18">
+            <img src="images/B3S18.png" alt="B3S18" class="b3s18">
+        </div>
+
+        <!-- B2S18 and B4S18 (Aligned Horizontally) -->
+        <div class="b2b4-container">
+            <img src="images/B2S18.png" alt="B2S18" class="b2s18" id="btnB2S18">
+            <img src="images/B4S18.png" alt="B4S18" class="b4s18" id="btnB4S18">
+        </div>
+    </div>
+
+    <!-- Screen 19 -->
+    <div class="game-container" id="screen19" style="display: none;">
+        <!-- Background -->
+        <div class="background-container19">
+            <img src="images/B1S19.png" alt="B1S19" class="background-image19">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
