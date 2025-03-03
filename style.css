@@ -11,258 +11,169 @@ body {
 }
 
 /* Screen 1 Styling */
-.game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.top-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  gap: 0;
-}
-
-.game-image {
-  height: auto;
-  margin: 0;
-}
-
-.b1 {
-  width: 9vw;
-  height: 70vh;
-}
-
-.b2 {
-  width: 18vw;
-  height: 45vh;
-  margin-left: 0;
-}
-
-.b3 {
-  width: 12vw;
-  height: 12vw;
-  margin-left: 6vw;
-}
-
-.b4-image {
-  width: 25vw;
-  height: auto;
-  cursor: pointer;
-  margin-left: 2vw;
-}
-
-.b5 {
-  width: 18vw;
-  height: 45vh;
-  position: absolute;
-  right: 10vw;
-}
-
-.b6 {
-  width: 12vw;
-  height: 70vh;
-  position: absolute;
-  right: 0;
-}
-
-.game-time-container {
-  text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  height: auto;
-}
-
-.game-text, .time-text {
-  font-size: 8vw;
-  color: white;
-}
-
-/* Footer */
-.footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  padding: 0;
-}
-
-.game-image-footer {
-  width: 100%;
-  height: auto;
-}
-
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 2 Styling */
-.rules-header {
-  text-align: center;
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.rules-text {
-  font-size: 8vw;
-  color: white;
-  text-align: center;
-  margin-bottom: 0.3rem;
-}
-
-.rules-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.b1s2 {
-  width: 20%;
-  height: auto;
-  margin-right: 0; /* No gap between B1S2 and B4S2 */
-}
-
-.b2s2 {
-  width: 45%;
-  height: auto;
-  margin: 0 auto; /* Center B2S2 */
-  text-align: center; /* Align text with REGELN */
-}
-
-.b3s2 {
-  width: 20%;
-  height: auto;
-  margin-left: 0; /* No gap between B3S2 and B4S2 */
-}
-
-.b4s2 {
-  margin: 0; /* Remove any gaps */
-  position: relative;
-  bottom: 0; /* Ensure alignment with B1S2 and B3S2 */
-}
-
-.footer {
-  margin: 0;
-  padding: 0; 
-}
-
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 3 Styling */
-.ready-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.screen1-container {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   overflow: hidden;
 }
 
-.ready-image {
+/* Background Image */
+.screen1-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures full-screen coverage */
+  z-index: -1; /* Push background behind content */
+}
+
+/* Centering "GAME TIME" */
+.screen1-title {
+  text-align: center;
+  line-height: 1;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* GAME and TIME text (Increased Size) */
+.screen1-text {
+  display: block;
+  font-size: 10vw; /* Bigger text */
+}
+
+/* Start button aligned below TIME */
+.screen1-start-button {
+  width: 35vw; /* Bigger button */
+  max-width: 350px;
+  height: auto;
+  cursor: pointer;
+  margin-top: 5vh; /* Adds space below text */
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ================= Screen 2 Styling ================= */
+.screen2-container {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  display: none; /* Hidden initially */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures Screen 2 appears above Screen 1 */
+  background-color: #2d2d72; /* Fallback color */
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 4 Styling */
-.frage1-header {
-  text-align: center;
-  margin-top: 5rem;
+/* Background Image for Screen 2 */
+.screen2-background {
   width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the full image is always visible */
+  position: absolute;
+  z-index: -1; /* Push background behind other content */
 }
 
-.frage1-text {
-  font-size: 5vw;
-  color: white;
-  text-align: center;
-  
+
+/* ========== SCREEN 3 STYLING ========== */
+.screen3-container {
+  width: 100vw;
+  height: 100vh;
+  display: none; /* Hidden initially */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures Screen 3 appears above previous screens */
+  background-color: #2d2d72; /* Fallback color */
 }
 
-.frage1-container {
-  display: flex;
-  justify-content: space-between;
+/* Background Image for Screen 3 */
+.screen3-background {
   width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the full image is always visible without cropping */
+  position: absolute;
+  z-index: -1; /* Push background behind other content */
 }
 
-.b1s4 {
-  width: 15%;
-  height: auto;
-  margin-right: 0; /* No gap between B1S2 and B4S2 */
+/* ========== SCREEN 4 STYLING ========== */
+.screen4-container {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.b2s4 {
-  width: 15%;
-  height: auto;
-  margin-left: 0; /* No gap between B3S2 and B4S2 */
+/* Background Image */
+.screen4-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures full image visibility without cropping */
+  z-index: -1;
 }
 
-.b3s4 {
-  margin: 0; /* Remove any gaps */
-  bottom: 0; /* Ensure alignment with B1S2 and B3S2 */
-}
-
-.footer {
-  margin: 0;
-  padding: 0; 
-}
-
-/* Question Box Styling */
+/* Responsive Question Box */
 .question-box {
-  background-color: #8453d4;
+  background-color: rgba(132, 83, 212, 0.9); /* Semi-transparent */
   padding: 2vw;
-  margin-top: 1vw;
-  margin-bottom: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  max-width: 600px; /* Increase max-width for a better sized box */
-  flex-direction: column; /* Arrange elements vertically */
-  border: 5px solid #fff; /* Add a white border to the question box */
+  width: 50vw; /* Adjusts dynamically based on screen width */
+  max-width: 600px; /* Limits size on large screens */
+  min-width: 280px; /* Prevents being too small */
+  flex-direction: column;
+  border: 5px solid #fff;
   box-shadow: 
-    8px 8px 0 #000,      /* Bottom-right black shadow */
-    -8px -8px 0 #000,    /* Top-left black shadow */
-    -8px 8px 0 #000,     /* Bottom-left black shadow */
-    8px -8px 0 #000;     /* Top-right black shadow */
-  transform: scale(1);
+      5px 5px 0 #000,
+      -5px -5px 0 #000,
+      -5px 5px 0 #000,
+      5px -5px 0 #000;
   transition: transform 0.2s ease-in-out;
 }
 
+/* Question Text */
 .question-container {
   text-align: center;
   width: 100%;
 }
 
 .question-container p {
-  font-size: 1.5vw;
+  font-size: 2vw; /* Adjust dynamically */
   color: white;
-  margin-bottom: 1vw; /* Create space between question and input box */
-  line-height: 2; /* Increase line height for better readability */
+  margin-bottom: 1.5vw;
+  line-height: 1.5;
   word-wrap: break-word;
 }
 
+/* Input Field */
 #answerInput {
   font-size: 1.5vw;
   font-family: 'Press Start 2P', cursive;
-  padding: 1.2vw;
-  margin-top: 1vw;
-  width: 90%; /* Increase input box size */
-  /*border-radius: 10px;*/
-  border: 3px solid #fff; 
-  background-color: #8453d4;
+  padding: 1vw;
+  width: 80%;
+  border: 3px solid #fff;
+  background-color: rgba(132, 83, 212, 0.8);
   color: white;
   text-align: center;
   outline: none;
-  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2); /* Inset shadow effect on input box */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #answerInput::placeholder {
@@ -273,70 +184,61 @@ body {
 /* Button Styling */
 #continueBtn {
   font-size: 1.2vw;
-  font-family: 'Press Start 2P', cursive; /* Pixel style font */
+  font-family: 'Press Start 2P', cursive;
   padding: 1vw 2.5vw;
-  margin-top: 1.2vw;
-  background-color: #df4747; 
+  margin-top: 1.5vw;
+  background-color: #df4747;
   color: white;
-  border: none; 
-  border-radius: 20px; /* Rounded button corners */
-  position: relative; /* Allow white border */
-  text-transform: uppercase; 
+  border: none;
+  border-radius: 15px;
+  text-transform: uppercase;
   cursor: pointer;
   box-shadow: 
-    0 8px 0 #4b0082, /* Dark purple pixel shadow below */
-    0 0 0 4px #fff;  /* White border around the button */
+      0 6px 0 #4b0082,
+      0 0 0 3px #fff;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
 }
 
 #continueBtn:hover {
-  transform: translateY(-2px); /* Dịch lên khi hover */
+  transform: translateY(-2px);
   box-shadow: 
-    0 6px 0 #4b0082, /* Bóng pixel đậm hơn */
-    0 0 0 4px #fff;  /* Viền trắng giữ nguyên */
+      0 4px 0 #4b0082,
+      0 0 0 3px #fff;
 }
 
 #continueBtn:active {
-  transform: translateY(2px); /* Move up on hover */
+  transform: translateY(2px);
   box-shadow: 
-    0 4px 0 #4b0082, /* Darker pixel shadow */
-    0 0 0 4px #fff;  /* White border remains */
+      0 3px 0 #4b0082,
+      0 0 0 3px #fff;
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 5 Styling */
-#screen5 {
-  position: relative;
+/* ========== SCREEN 5 STYLING ========== */
+.screen5-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  background-color: #2d2d72;
-}
-
-/* Background image: Full screen */
-.background-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.background-image {
+/* Background Image */
+.screen5-background {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image adjusts to screen size */
+  object-fit: contain; /* Ensures full visibility without cropping */
+  z-index: -1;
 }
 
 /* Overlay content */
 .content-overlay5 {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -351,7 +253,7 @@ body {
 /* Scrolling text */
 .scrolling-text {
   position: absolute;
-  top: 8%; /* Adjusts based on screen size */
+  top: 8%;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -359,30 +261,22 @@ body {
 
 .scrolling-text h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 4vw; /* Adjusts font size to viewport width */
+  font-size: 4vw;
   color: black;
   display: inline-block;
-  animation: scrolling 10s linear infinite; /* Continuous horizontal scroll */
+  animation: scrolling 10s linear infinite;
 }
 
 /* Text "Falsche Antwort" */
 .text-container {
   display: flex;
-  flex-direction: column; /* Display "Falsche" and "Antwort" vertically */
+  flex-direction: column;
   align-items: center;
 }
 
-.falsche-text {
+.falsche-text, .antwort-text {
   font-family: 'Press Start 2P', cursive;
-  font-size: 7vw; /* Responsive font size */
-  color: white;
-  margin: 0;
-  margin-bottom: 1rem; /* Create space between text and icons */
-}
-
-.antwort-text {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 7vw; /* Responsive font size */
+  font-size: 6vw; /* Adjusts dynamically */
   color: white;
   margin: 0;
 }
@@ -392,89 +286,87 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Ensures icons wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .heart-icon {
-  width: 100vw; /* Adjusts size dynamically based on screen width */
-  max-width: 400px; /* Limits maximum size for large screens */
+  width: 20vw; /* Adjust dynamically */
+  max-width: 300px;
   height: auto;
 }
 
 .red-x-icon {
-  width: 15vw; /* Adjusts size dynamically based on screen width */
-  max-width: 250px; /* Limits maximum size for large screens */
+  width: 12vw;
+  max-width: 200px;
   height: auto;
-  margin-left: -6vw; /* Overlap Red X slightly to remove the gap */
+  margin-left: -5vw;
 }
 
 /* Scroll animation for "Something went wrong" */
 @keyframes scrolling {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Responsive adjustments */
-@media screen5 and (max-width: 768px) {
-  /* For tablets and small screens */
+@media (max-width: 768px) {
   .scrolling-text h1 {
-    font-size: 6vw; /* Larger text for smaller screens */
+      font-size: 5vw;
   }
 
-  .falsche-antwort {
-    font-size: 6vw; /* Larger text for visibility */
-    margin-top: 8%;
+  .falsche-text, .antwort-text {
+      font-size: 5vw;
   }
 
   .icon-container {
-    gap: 1rem; /* Reduce spacing between icons */
+      gap: 1rem;
   }
 
   .heart-icon {
-    width: 40vw; /* Slightly larger for better visibility */
+      width: 30vw;
   }
 
   .red-x-icon {
-    width: 20vw;
-  }
-
-  .red-x-icon {
-    margin-left: -10vw; /* Adjust overlap for smaller screens */
+      width: 18vw;
+      margin-left: -8vw;
   }
 }
 
-@media screen5 and (max-width: 480px) {
-  /* For mobile devices */
+@media (max-width: 480px) {
   .scrolling-text h1 {
-    font-size: 8vw; /* Even larger text for mobile */
+      font-size: 6vw;
   }
 
-  .falsche-antwort {
-    font-size: 8vw;
-    margin-top: 5%;
+  .falsche-text, .antwort-text {
+      font-size: 6vw;
   }
 
-  .heart-icon,
-  .red-x-icon {
-    width: 15vw; /* Larger icons for mobile */
+  .heart-icon, .red-x-icon {
+      width: 20vw;
   }
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 6 Styling */
-#screen6 {
-  position: relative;
+/* ========== SCREEN 6 STYLING ========== */
+.screen6-container {
   width: 100vw;
   height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   overflow: hidden;
-  background-image: url('images/B1S6.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+/* Background Image */
+.screen6-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: -1;
 }
 
 /* Items Container */
@@ -482,66 +374,154 @@ body {
   position: absolute;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -40%);
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  gap: 2rem 10rem;
-  width: 60%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 600px;
+  min-width: 300px;
   justify-content: center;
   align-items: center;
 }
 
-/* Item (Icon + Button) */
-.item6 {
+/* Grid Layout for Items */
+.items-grid6 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 0.02vh 0.04vw; /* Row spacing = 1vh, Column spacing = 3vw */
+  width: 95%;
+  justify-items: center;
+  align-items: stretch; /* Ensures items align properly within each row */
+}
+
+/* Individual item container */
+.item6-6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: -1rem;
+  justify-content: space-between;
+  gap: -1vh;
+  flex: 1;
+  min-width: 100px; /* Ensures a minimum width to maintain alignment */
+  height: auto; /* Đảm bảo tự động căn chỉnh chiều cao */
 }
 
-/* Item Buttons */
+/* Responsive icons - Images dynamically scale with screen size */
+.item-icon6 {
+  width: 8vw;
+  max-width: 110px;
+  min-width: 40px;
+  height: auto;
+}
+
+/* Responsive buttons - Buttons scale with screen size */
 .item-button6 {
-  width: 17vw;
-  max-width: 200px;
+  width: 35vw; /* Adjust dynamically based on screen width */
+  max-width: 190px;
+  min-width: 115px;
   height: auto;
   cursor: pointer;
+  align-self: center; /* Ensures buttons align at the same horizontal level */
+  text-align: center;
+  display: flex;
+  align-items: center; /* Căn chỉnh theo chiều dọc */
+  justify-content: center;
 }
 
-/* Hidden Items */
-.hidden-item {
+/* Hidden items */
+.hidden-item6 {
   display: none;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 1%;
+  left: 60%;
   transform: translateX(-50%);
-  width: 17vw;
-  max-width: 200px;
+  width: 10vw;
+  max-width: 140px;
+  min-width: 60px;
+  height: auto;
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 8 Styling */
-#screen8 {
-  position: relative;
+/* ===================== Responsive Design ===================== */
+@media (max-width: 1024px) {
+  .items-container6 {
+      width: 70vw;
+  }
+
+  .items-grid6 {
+      gap: 0.001vh 0.006vw; /* Reduced horizontal gap */
+  }
+
+  .item-icon6 {
+      width: 7vw;
+  }
+
+  .item-button6 {
+      width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .items-container6 {
+      width: 60vw;
+  }
+
+  .items-grid6 {
+      gap: 0.001vh 0.002vw; /* Further reduce horizontal spacing */
+  }
+
+  .item-icon6 {
+      width: 5vw;
+  }
+
+  .item-button6 {
+      width: 20vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .items-container6 {
+      width: 50vw;
+  }
+
+  /* Stack items vertically on very small screens */
+  .items-grid6 {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 0.05vh; /* More spacing when stacked */
+  }
+
+  .item-icon6 {
+      width: 3vw;
+  }
+
+  .item-button6 {
+      width: 10vw;
+  }
+}
+
+
+/* ========== SCREEN 8 STYLING ========== */
+.screen8-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container8 {
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.background-image8 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
+/* Background Image */
+.screen8-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/B1S8.png') no-repeat center center;
+  background-size: contain; /* Ensures the image is fully visible without cropping */
 }
 
 /* Content Overlay */
@@ -560,18 +540,18 @@ body {
 /* Buttons Container */
 .buttons-container8 {
   position: absolute;
-  top: 45%; 
-  right: 30%; 
+  top: 42%; /* Move buttons higher */
+  left: 50%; /* Move buttons to the left */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; 
+  gap: 0.2rem;
 }
 
 /* Buttons */
 .button8 {
-  width: 18vw; 
-  max-width: 250px;
+  width: 40vw; /* Adjust button width dynamically */
+  max-width: 270px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -583,12 +563,6 @@ body {
 
 .button8:active {
   transform: scale(0.9);
-}
-
-/* Screen 8 Blur Effect */
-.blur8 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
 }
 
 /* Popup Container */
@@ -613,18 +587,19 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content */
+  align-items: center;
   justify-content: center;
 }
 
 /* Popup Image (B5S8) */
 .popup-content8 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
+  width: 40%;
+  max-width: 300px;
+  min-width: 80px;
+  margin-bottom: 1rem;
 }
 
-/* OK Button - Centered Below B5S8 */
+/* OK Button */
 #closePopup8 {
   font-family: 'Press Start 2P', cursive;
   background: rgb(159, 1, 1);
@@ -632,47 +607,98 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   box-shadow: 3px 3px 0px black;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Hover Effect - Slight Lift */
-#closePopup8:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .buttons-container8 {
+      top: 45%; /* Adjust for medium screens */
+      left: 50%;
+  }
+
+  .button8 {
+      width: 20vw;
+  }
+
+  .popup-content8 img {
+      width: 50%;
+      max-width: 120px;
+  }
+
+  #closePopup8 {
+      max-width: 100px;
+  }
 }
 
-/* Click Effect - Button Pressed */
-#closePopup8:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
+@media (max-width: 768px) {
+  .buttons-container8 {
+      top: 47%; /* Adjust for smaller screens */
+      left: 50%;
+  }
+
+  .button8 {
+      width: 20vw;
+  }
+
+  .popup-content8 img {
+    width: 30%;
+    max-width: 90px;
+  }
+
+  #closePopup8 {
+      max-width: 80px;
+  }
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 10 Styling */
-#screen10 {
-  position: relative;
+@media (max-width: 480px) {
+  .buttons-container8 {
+      top: 40%; /* Adjust for mobile screens */
+      left: 50%;
+  }
+
+  .button8 {
+      width: 20vw;
+  }
+
+  .popup-content8 img {
+    width: 20%;
+    max-width: 70px;
+  }
+
+  #closePopup8 {
+      max-width: 60px;
+  }
+}
+
+
+/* ========== SCREEN 10 STYLING ========== */
+.screen10-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container10 {
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.background-image10 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
+/* Background Image */
+.screen10-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/B1S10.png') no-repeat center center;
+  background-size: contain; /* Ensures the image is fully visible without cropping */
 }
 
 /* Content Overlay */
@@ -691,18 +717,18 @@ body {
 /* Buttons Container */
 .buttons-container10 {
   position: absolute;
-  top: 45%; 
-  right: 30%; 
+  top: 42%; /* Centering adjustment */
+  left: 50%; /* Adjust button alignment */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; 
+  gap: 0.2rem;
 }
 
 /* Buttons */
 .button10 {
-  width: 18vw; 
-  max-width: 250px;
+  width: 40vw; /* Adjust button width dynamically */
+  max-width: 270px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -714,12 +740,6 @@ body {
 
 .button10:active {
   transform: scale(0.9);
-}
-
-/* Screen 10 Blur Effect */
-.blur10 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
 }
 
 /* Popup Container */
@@ -744,18 +764,19 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content */
+  align-items: center;
   justify-content: center;
 }
 
-/* Popup Image (B5S8) */
+/* Popup Image (B5S10) */
 .popup-content10 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
+  width: 40%;
+  max-width: 300px;
+  min-width: 80px;
+  margin-bottom: 1rem;
 }
 
-/* OK Button - Centered Below B5S8 */
+/* OK Button */
 #closePopup10 {
   font-family: 'Press Start 2P', cursive;
   background: rgb(159, 1, 1);
@@ -763,47 +784,98 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   box-shadow: 3px 3px 0px black;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Hover Effect - Slight Lift */
-#closePopup10:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .buttons-container10 {
+      top: 45%;
+      left: 50%;
+  }
+
+  .button10 {
+      width: 20vw;
+  }
+
+  .popup-content10 img {
+      width: 50%;
+      max-width: 120px;
+  }
+
+  #closePopup10 {
+      max-width: 100px;
+  }
 }
 
-/* Click Effect - Button Pressed */
-#closePopup10:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
+@media (max-width: 768px) {
+  .buttons-container10 {
+      top: 47%;
+      left: 50%;
+  }
+
+  .button10 {
+      width: 20vw;
+  }
+
+  .popup-content10 img {
+      width: 30%;
+      max-width: 90px;
+  }
+
+  #closePopup10 {
+      max-width: 80px;
+  }
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 12 Styling */
-#screen12 {
-  position: relative;
+@media (max-width: 480px) {
+  .buttons-container10 {
+      top: 40%;
+      left: 50%;
+  }
+
+  .button10 {
+      width: 20vw;
+  }
+
+  .popup-content10 img {
+      width: 20%;
+      max-width: 70px;
+  }
+
+  #closePopup10 {
+      max-width: 60px;
+  }
+}
+
+
+/* ========== SCREEN 12 STYLING ========== */
+.screen12-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container12 {
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.background-image12 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+/* Background Image */
+.screen12-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/B1S12.png') no-repeat center center;
+  background-size: contain; /* Ensures the image is fully visible without cropping */
 }
 
 /* Content Overlay */
@@ -822,18 +894,18 @@ body {
 /* Buttons Container */
 .buttons-container12 {
   position: absolute;
-  top: 45%; 
-  right: 30%; 
+  top: 40%; /* Centering adjustment */
+  left: 50%; /* Adjust button alignment */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* Khoảng cách giữa các nút */
+  gap: 0.2rem;
 }
 
 /* Buttons */
 .button12 {
-  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
-  max-width: 250px;
+  width: 40vw; /* Adjust button width dynamically */
+  max-width: 270px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -845,12 +917,6 @@ body {
 
 .button12:active {
   transform: scale(0.9);
-}
-
-/* Screen 12 Blur Effect */
-.blur12 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
 }
 
 /* Popup Container */
@@ -875,18 +941,19 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content */
+  align-items: center;
   justify-content: center;
 }
 
 /* Popup Image (B5S12) */
 .popup-content12 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
+  width: 40%;
+  max-width: 300px;
+  min-width: 80px;
+  margin-bottom: 1rem;
 }
 
-/* OK Button - Centered Below B5S12 */
+/* OK Button */
 #closePopup12 {
   font-family: 'Press Start 2P', cursive;
   background: rgb(159, 1, 1);
@@ -894,177 +961,98 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   box-shadow: 3px 3px 0px black;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Hover Effect - Slight Lift */
-#closePopup12:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .buttons-container12 {
+      top: 45%;
+      left: 50%;
+  }
+
+  .button12 {
+      width: 20vw;
+  }
+
+  .popup-content12 img {
+      width: 50%;
+      max-width: 120px;
+  }
+
+  #closePopup12 {
+      max-width: 100px;
+  }
 }
 
-/* Click Effect - Button Pressed */
-#closePopup12:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
+@media (max-width: 768px) {
+  .buttons-container12 {
+      top: 47%;
+      left: 50%;
+  }
+
+  .button12 {
+      width: 20vw;
+  }
+
+  .popup-content12 img {
+      width: 30%;
+      max-width: 90px;
+  }
+
+  #closePopup12 {
+      max-width: 80px;
+  }
 }
 
-/* Screen 12 Styling */
-#screen12 {
-  position: relative;
+@media (max-width: 480px) {
+  .buttons-container12 {
+      top: 40%;
+      left: 50%;
+  }
+
+  .button12 {
+      width: 20vw;
+  }
+
+  .popup-content12 img {
+      width: 20%;
+      max-width: 70px;
+  }
+
+  #closePopup12 {
+      max-width: 60px;
+  }
+}
+
+
+/* ========== SCREEN 14 STYLING ========== */
+.screen14-container {
   width: 100vw;
   height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   overflow: hidden;
 }
 
-/* Background Styling */
-.background-container12 {
+/* Background Image */
+.screen14-background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.background-image12 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
-}
-
-/* Content Overlay */
-.content-overlay12 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Buttons Container */
-.buttons-container12 {
-  position: absolute;
-  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
-  right: 30%; /* Canh lề phải */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem; /* Khoảng cách giữa các nút */
-}
-
-/* Buttons */
-.button12 {
-  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
-  max-width: 250px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.button12:hover {
-  transform: scale(1.1);
-}
-
-.button12:active {
-  transform: scale(0.9);
-}
-
-/* Screen 12 Blur Effect */
-.blur12 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
-}
-
-/* Popup Container */
-.popup-container12 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* Popup Content */
-.popup-content12 {
-  background: rgb(253, 252, 252);
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content */
-  justify-content: center;
-}
-
-/* Popup Image (B5S12) */
-.popup-content12 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
-}
-
-/* OK Button - Centered Below B5S12 */
-#closePopup12 {
-  font-family: 'Press Start 2P', cursive;
-  background: rgb(159, 1, 1);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 3px 3px 0px black;
-  transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S12 */
-  max-width: 400px; /* Keep button width proportional */
-}
-
-/* Hover Effect - Slight Lift */
-#closePopup12:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
-}
-
-/* Click Effect - Button Pressed */
-#closePopup12:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
-}
-
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 14 Styling */
-#screen14 {
-  position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.background-image14 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+  background: url('images/B1S14.png') no-repeat center center;
+  background-size: contain; /* Ensures the image is fully visible without cropping */
 }
 
 /* Content Overlay */
@@ -1083,18 +1071,18 @@ body {
 /* Buttons Container */
 .buttons-container14 {
   position: absolute;
-  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
-  right: 30%; /* Canh lề phải */
+  top: 43%; /* Centering adjustment */
+  left: 50%; /* Adjust button alignment */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* Khoảng cách giữa các nút */
+  gap: 0.1rem;
 }
 
 /* Buttons */
 .button14 {
-  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
-  max-width: 250px;
+  width: 40vw; /* Adjust button width dynamically */
+  max-width: 270px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -1106,12 +1094,6 @@ body {
 
 .button14:active {
   transform: scale(0.9);
-}
-
-/* Screen 14 Blur Effect */
-.blur14 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
 }
 
 /* Popup Container */
@@ -1136,148 +1118,19 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content */
-  justify-content: center;
-}
-
-/* Popup Image (B5S14) */
-.popup-content12 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
-}
-
-/* OK Button - Centered Below B5S14 */
-#closePopup14 {
-  font-family: 'Press Start 2P', cursive;
-  background: rgb(159, 1, 1);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 3px 3px 0px black;
-  transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
-}
-
-/* Hover Effect - Slight Lift */
-#closePopup14:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
-}
-
-/* Click Effect - Button Pressed */
-#closePopup14:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
-}
-
-/* Screen 14 Styling */
-#screen14 {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.background-image14 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
-}
-
-/* Content Overlay */
-.content-overlay14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-/* Buttons Container */
-.buttons-container14 {
-  position: absolute;
-  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
-  right: 30%; /* Canh lề phải */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem; /* Khoảng cách giữa các nút */
-}
-
-/* Buttons */
-.button14 {
-  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
-  max-width: 250px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.button14:hover {
-  transform: scale(1.1);
-}
-
-.button14:active {
-  transform: scale(0.9);
-}
-
-/* Screen 14 Blur Effect */
-.blur14 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
-}
-
-/* Popup Container */
-.popup-container14 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* Popup Content */
-.popup-content14 {
-  background: rgb(253, 252, 252);
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content */
   justify-content: center;
 }
 
 /* Popup Image (B5S14) */
 .popup-content14 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
+  width: 40%;
+  max-width: 300px;
+  min-width: 80px;
+  margin-bottom: 1rem;
 }
 
-/* OK Button - Centered Below B5S14 */
+/* OK Button */
 #closePopup14 {
   font-family: 'Press Start 2P', cursive;
   background: rgb(159, 1, 1);
@@ -1285,48 +1138,98 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   box-shadow: 3px 3px 0px black;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Hover Effect - Slight Lift */
-#closePopup14:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .buttons-container14 {
+      top: 45%;
+      left: 50%;
+  }
+
+  .button14 {
+      width: 20vw;
+  }
+
+  .popup-content14 img {
+      width: 50%;
+      max-width: 120px;
+  }
+
+  #closePopup14 {
+      max-width: 100px;
+  }
 }
 
-/* Click Effect - Button Pressed */
-#closePopup14:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
+@media (max-width: 768px) {
+  .buttons-container14 {
+      top: 47%;
+      left: 50%;
+  }
+
+  .button14 {
+      width: 20vw;
+  }
+
+  .popup-content14 img {
+      width: 30%;
+      max-width: 90px;
+  }
+
+  #closePopup14 {
+      max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons-container14 {
+      top: 40%;
+      left: 50%;
+  }
+
+  .button14 {
+      width: 20vw;
+  }
+
+  .popup-content14 img {
+      width: 20%;
+      max-width: 70px;
+  }
+
+  #closePopup14 {
+      max-width: 60px;
+  }
 }
 
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 16 Styling */
-#screen16 {
-  position: relative;
+/* ========== SCREEN 16 STYLING ========== */
+.screen16-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container16 {
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.background-image16 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
+/* Background Image */
+.screen16-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/B1S16.png') no-repeat center center;
+  background-size: contain; /* Ensures the image is fully visible without cropping */
 }
 
 /* Content Overlay */
@@ -1345,18 +1248,18 @@ body {
 /* Buttons Container */
 .buttons-container16 {
   position: absolute;
-  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
-  right: 30%; /* Canh lề phải */
+  top: 39%; /* Centering adjustment */
+  left: 50%; /* Adjust button alignment */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* Khoảng cách giữa các nút */
+  gap: 0.1rem;
 }
 
 /* Buttons */
 .button16 {
-  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
-  max-width: 250px;
+  width: 40vw; /* Adjust button width dynamically */
+  max-width: 270px;
   height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -1368,12 +1271,6 @@ body {
 
 .button16:active {
   transform: scale(0.9);
-}
-
-/* Screen 16 Blur Effect */
-.blur16 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
 }
 
 /* Popup Container */
@@ -1398,18 +1295,19 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers content */
+  align-items: center;
   justify-content: center;
 }
 
 /* Popup Image (B5S16) */
 .popup-content16 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
+  width: 40%;
+  max-width: 300px;
+  min-width: 80px;
+  margin-bottom: 1rem;
 }
 
-/* OK Button - Centered Below B5S16 */
+/* OK Button */
 #closePopup16 {
   font-family: 'Press Start 2P', cursive;
   background: rgb(159, 1, 1);
@@ -1417,247 +1315,225 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   box-shadow: 3px 3px 0px black;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Hover Effect - Slight Lift */
-#closePopup16:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .buttons-container16 {
+      top: 45%;
+      left: 50%;
+  }
+
+  .button16 {
+      width: 20vw;
+  }
+
+  .popup-content16 img {
+      width: 50%;
+      max-width: 120px;
+  }
+
+  #closePopup16 {
+      max-width: 100px;
+  }
 }
 
-/* Click Effect - Button Pressed */
-#closePopup16:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
+@media (max-width: 768px) {
+  .buttons-container16 {
+      top: 47%;
+      left: 50%;
+  }
+
+  .button16 {
+      width: 20vw;
+  }
+
+  .popup-content16 img {
+      width: 30%;
+      max-width: 90px;
+  }
+
+  #closePopup16 {
+      max-width: 80px;
+  }
 }
 
-/* Screen 16 Styling */
-#screen16 {
-  position: relative;
+@media (max-width: 480px) {
+  .buttons-container16 {
+      top: 40%;
+      right: 50%;
+  }
+
+  .button16 {
+      width: 20vw;
+  }
+
+  .popup-content16 img {
+      width: 20%;
+      max-width: 70px;
+  }
+
+  #closePopup16 {
+      max-width: 60px;
+  }
+}
+
+/* ========== SCREEN 18 STYLING ========== */
+.screen18-container {
   width: 100vw;
   height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   overflow: hidden;
 }
 
-/* Background Styling */
-.background-container16 {
+/* Background Image */
+.screen18-background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.background-image16 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ màn hình */
-}
-
-/* Content Overlay */
-.content-overlay16 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Buttons Container */
-.buttons-container16 {
-  position: absolute;
-  top: 45%; /* Điều chỉnh nút bấm đúng vị trí */
-  right: 30%; /* Canh lề phải */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem; /* Khoảng cách giữa các nút */
-}
-
-/* Buttons */
-.button16 {
-  width: 18vw; /* Điều chỉnh kích thước giống hình gốc */
-  max-width: 250px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.button16:hover {
-  transform: scale(1.1);
-}
-
-.button16:active {
-  transform: scale(0.9);
-}
-
-/* Screen 16 Blur Effect */
-.blur16 {
-  filter: blur(5px);
-  pointer-events: none; /* Prevents interactions with blurred elements */
-}
-
-/* Popup Container */
-.popup-container16 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* Popup Content */
-.popup-content16 {
-  background: rgb(253, 252, 252);
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content */
-  justify-content: center;
-}
-
-/* Popup Image (B5S16) */
-.popup-content16 img {
-  width: 50%;
-  max-width: 400px;
-  margin-bottom: 1rem; /* Add space below image */
-}
-
-/* OK Button - Centered Below B5S16 */
-#closePopup16 {
-  font-family: 'Press Start 2P', cursive;
-  background: rgb(159, 1, 1);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 3px 3px 0px black;
-  transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Match width to B5S8 */
-  max-width: 400px; /* Keep button width proportional */
-}
-
-/* Hover Effect - Slight Lift */
-#closePopup16:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 0px black;
-}
-
-/* Click Effect - Button Pressed */
-#closePopup16:active {
-  transform: translateY(2px);
-  box-shadow: 2px 2px 0px black;
-}
-
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 18 Styling */
-#screen18 {
-  position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container18 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.background-image18 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: url('images/B1S18.png') no-repeat center center;
+  background-size: contain;
 }
 
 /* B2S18 and B4S18 - Align Horizontally */
 .b2b4-container {
   position: absolute;
-  top: 39%;
+  top: 42%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 600px;
+  gap: min(10vw, 5rem); /* Responsive spacing */
 }
 
 /* B2S18 */
 .b2s18 {
-  width: 25vw;
+  width: clamp(15vw, 20vw, 220px);
   height: auto;
 }
 
 /* B4S18 */
 .b4s18 {
-  width: 25vw;
+  width: clamp(15vw, 20vw, 220px);
   height: auto;
 }
 
-/* Điều chỉnh vị trí của B3S18 để nằm trên B4S18 */
+/* Adjusting position of B3S18 above B4S18 */
 .b3s18-container {
   position: absolute;
-  top: 30%; /* Điều chỉnh cao hơn B4S18 */
-  left: 85%; /* Điều chỉnh vị trí gần với B4S18 */
+  top: 28%;
+  left: 80%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Hiển thị B3S18 theo hàng ngang và chồng lên nhau */
+/* Arrange B3S18 images in an overlapping pattern */
 .b3s18 {
-  width: 8vw;
+  width: clamp(5vw, 6vw, 100px);
   height: auto;
-  margin-left: -5vw; /* Giảm khoảng cách để các đồng xu chồng lên nhau */
-  position: relative; /* Cho phép di chuyển từng hình */
-}
-/* Tạo hiệu ứng nhô lên */
-.b3s18:nth-child(1),
-.b3s18:nth-child(3),
-.b3s18:nth-child(4),
-.b3s18:nth-child(6) {
-  top: -15px; /* Nhô lên cố định */
+  margin-left: -3vw;
+  position: relative;
 }
 
-/*++++++++++++++++++++++++++++++++++++++*/
-/* Screen 19 Styling */
-#screen19 {
-  position: relative;
+/* Creating an alternating height effect */
+.b3s18:nth-child(odd) {
+  top: -10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .b2b4-container {
+      top: 45%;
+      gap: min(8vw, 4rem);
+  }
+
+  .b3s18-container {
+      left: 75%;
+      top: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .b2b4-container {
+      top: 50%;
+      gap: min(6vw, 3rem);
+  }
+
+  .b3s18-container {
+      left: 70%;
+      top: 32%;
+  }
+}
+
+@media (max-width: 480px) {
+  .b2b4-container {
+      top: 55%;
+      gap: min(4vw, 2rem);
+  }
+
+  .b3s18-container {
+      left: 65%;
+      top: 35%;
+  }
+}
+
+
+/* ========== SCREEN 19 STYLING ========== */
+.screen19-container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* Background Styling */
-.background-container19 {
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
-.background-image19 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh phủ kín màn hình */
+/* Background Image */
+.screen19-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/B1S19.png') no-repeat center center;
+  background-size: contain; /* Ensures full visibility without cropping */
 }
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .screen19-background {
+      background-size: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .screen19-background {
+      background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .screen19-background {
+      background-size: contain;
+  }
+}
+
