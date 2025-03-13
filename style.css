@@ -229,9 +229,6 @@ body {
 
 /* Small Mobile Screens (Less than 600px wide) */
 @media (max-width: 600px) {
-  .screen4-container {
-    padding: 5vw;
-  }
   .question-box {
     width: 50vw; /* Increase width for small screens */
   }
