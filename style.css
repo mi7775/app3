@@ -244,7 +244,7 @@ body {
   }
   #continueBtn {
     width: 50%;
-    font-size: clamp(0.3rem, 0.5vw, 0.7rem); /* Prevents oversized button */
+    font-size: clamp(0.4rem, 0.6vw, 0.8rem); /* Prevents oversized button */
   }
 }
 
