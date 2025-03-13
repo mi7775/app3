@@ -3,7 +3,7 @@ body {
   font-family: 'Press Start 2P', cursive;
   margin: 0;
   padding: 0;
-  background-color: #2d2d72;
+  background-color: #fdfdfd;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -82,7 +82,7 @@ body {
   top: 0;
   left: 0;
   z-index: 10; /* Ensures Screen 2 appears above Screen 1 */
-  background-color: #2d2d72; /* Fallback color */
+  background-color: #fdfdfd; /* Fallback color */
 }
 
 /* Background Image for Screen 2 */
@@ -106,7 +106,7 @@ body {
   top: 0;
   left: 0;
   z-index: 10; /* Ensures Screen 3 appears above previous screens */
-  background-color: #2d2d72; /* Fallback color */
+  background-color: #fdfdfd; /* Fallback color */
 }
 
 /* Background Image for Screen 3 */
