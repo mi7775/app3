@@ -52,11 +52,24 @@ body {
   max-width: 350px;
   height: auto;
   cursor: pointer;
-  margin-top: 5vh; /* Adds space below text */
+  margin-top: 0.3vh; /* Adds space below text */
   position: relative;
   z-index: 1;
 }
 
+/* Adjust layout for small mobile screens */
+@media (max-width: 150px) {
+  .screen1-container {
+    padding: 5vw; /* Add more padding on small screens */
+  }
+  .screen1-title {
+    font-size: 8vw; /* Reduce text size for small screens */
+  }
+  .screen1-start-button {
+    width: 40vw; /* Increase button width for better usability */
+    font-size: 1rem; /* Adjust font size */
+  }
+}
 
 /* ================= Screen 2 Styling ================= */
 .screen2-container {
@@ -136,8 +149,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 50vw; /* Adjusts dynamically based on screen width */
-  max-width: 600px; /* Limits size on large screens */
-  min-width: 280px; /* Prevents being too small */
+  max-width: 1189px; /* Limits size on large screens */
+  min-width: 100px; /* Prevents being too small */
   flex-direction: column;
   border: 5px solid #fff;
   box-shadow: 
@@ -155,7 +168,7 @@ body {
 }
 
 .question-container p {
-  font-size: 2vw; /* Adjust dynamically */
+  font-size: clamp(0.5rem, 1.5vw, 2rem); /* Adjusts dynamically */
   color: white;
   margin-bottom: 1.5vw;
   line-height: 1.5;
@@ -164,7 +177,7 @@ body {
 
 /* Input Field */
 #answerInput {
-  font-size: 1.5vw;
+  font-size: clamp(0.5rem, 1.5vw, 2rem); /* Adjusts dynamically */
   font-family: 'Press Start 2P', cursive;
   padding: 1vw;
   width: 80%;
@@ -183,7 +196,7 @@ body {
 
 /* Button Styling */
 #continueBtn {
-  font-size: 1.2vw;
+  font-size: clamp(0.5rem, 0.9vw, 1.2rem); /* Dynamic font size */
   font-family: 'Press Start 2P', cursive;
   padding: 1vw 2.5vw;
   margin-top: 1.5vw;
