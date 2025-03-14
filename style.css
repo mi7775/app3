@@ -442,7 +442,7 @@ body {
 .item-icon6 {
   width: 8vw;
   max-width: 110px;
-  min-width: 40px;
+  min-width: 30px;
   height: auto;
 }
 
@@ -450,7 +450,7 @@ body {
 .item-button6 {
   width: 35vw; /* Adjust dynamically based on screen width */
   max-width: 190px;
-  min-width: 115px;
+  min-width: 50px;
   height: auto;
   cursor: pointer;
   align-self: center; /* Ensures buttons align at the same horizontal level */
