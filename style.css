@@ -514,12 +514,14 @@ body {
 @media (max-width: 480px) {
   .items-container6 {
       width: 50vw;
+      top: 52.5%; /* Move even higher for very small screens */
+      left: 46%;
   }
 
   /* Stack items vertically on very small screens */
   .items-grid6 {
       grid-template-columns: repeat(2, 1fr); /* Prevents vertical stacking */
-      gap: -1vh; /* More spacing when stacked */
+      gap: 0.05vh; /* More spacing when stacked */
   }
 
   .item-icon6 {
