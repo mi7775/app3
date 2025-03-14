@@ -519,7 +519,7 @@ body {
   /* Stack items vertically on very small screens */
   .items-grid6 {
       grid-template-columns: repeat(2, 1fr); /* Prevents vertical stacking */
-      gap: 0.05vh; /* More spacing when stacked */
+      gap: -1vh; /* More spacing when stacked */
   }
 
   .item-icon6 {
