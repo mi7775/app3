@@ -496,6 +496,7 @@ body {
 @media (max-width: 768px) {
   .items-container6 {
       width: 60vw;
+      top: 55%; /* Move even higher for very small screens */
   }
 
   .items-grid6 {
@@ -507,7 +508,7 @@ body {
   }
 
   .item-button6 {
-      width: 20vw;
+      width: 17vw;
   }
 }
 
