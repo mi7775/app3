@@ -515,7 +515,7 @@ body {
   .items-container6 {
       width: 50vw;
       top: 52.5%; /* Move even higher for very small screens */
-      left: 50%;
+      left: 53%;
   }
 
   /* Stack items vertically on very small screens */
