@@ -404,7 +404,7 @@ body {
 /* Items Container */
 .items-container6 {
   position: absolute;
-  top: 55%;
+  top: 53.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -450,7 +450,7 @@ body {
 .item-button6 {
   width: 35vw; /* Adjust dynamically based on screen width */
   max-width: 190px;
-  min-width: 50px;
+  min-width: 60px;
   height: auto;
   cursor: pointer;
   align-self: center; /* Ensures buttons align at the same horizontal level */
